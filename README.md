@@ -11,7 +11,11 @@ Because I only use chromedriver, the program can only for chromedriver.XDD
 
 ###-----------------------------------------------------------------------------
 
-Using the program, you need to install extral modual - selenium and requests - "pip install -r requirements.txt".
+Using the program, you need to install extral modual - selenium and requests - 
+```python
+pip install -r requirements.txt
+```
+.
 
 You can run the file directly, you can import to your Python file too.
 
@@ -19,10 +23,17 @@ If you would like to import to your Python file,
 
 First, download "chromedriver_autoupdate.py" and put it in you working folder, the same folder with you Python file.
 
-Second, using argument in the top of your program, from chromedriver_autoupdate import chromedriver_autoupdate.
+Second, using 
+```python
+from chromedriver_autoupdate import chromedriver_autoupdate
+```
+in the top of your program, .
 
-Third, call method check in your program, sucj as "chromedriver_autoupdate().check()".
+Third, call method ```check()``` in your program, sucj as 
+```python
+chromedriver_autoupdate().check()
+```
 
-If update chromedriver successful, it will return "OK".
+If update chromedriver successful, it will return ```OK```.
 
-If somethin wrong, it will return error log file name, check detail in log file.
+If somethin wrong, it will return error log file name, such as  ```yyyymmdd hhMMss.log```, check detail in log file.
