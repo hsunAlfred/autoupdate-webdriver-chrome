@@ -11,11 +11,11 @@ Because I only use chromedriver, the program can only for chromedriver.XDD
 
 ###-----------------------------------------------------------------------------
 
-Using the program, you need to install extral modual - selenium and requests - 
+Using the program, you need to install extral modual - selenium and requests - you can use
 ```python
 pip install -r requirements.txt
 ```
-.
+to install all package required.
 
 You can run the file directly, you can import to your Python file too.
 
@@ -27,7 +27,7 @@ Second, using
 ```python
 from chromedriver_autoupdate import chromedriver_autoupdate
 ```
-in the top of your program, .
+in the top of your program.
 
 Third, call method ```check()``` in your program, sucj as 
 ```python
