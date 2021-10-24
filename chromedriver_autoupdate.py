@@ -65,7 +65,7 @@ class chromedriver_autoupdate:
                 v = re[temp_start:temp_end].split('</strong>')[0].split(' ')[1]
 
             driver_url = f'https://chromedriver.storage.googleapis.com/{v}/chromedriver_win32.zip'
-            print(driver_url)
+
             try:
                 ref = requests.get(driver_url)
             except Exception as e:
