@@ -21,7 +21,6 @@ class chromedriver_autoupdate:
         chrome_options.add_argument("--headless")
 
         try:
-            raise
             print('正在檢查chromedriver元件')
             driver = webdriver.Chrome(chrome_options=chrome_options)
             driver.quit()
