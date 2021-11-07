@@ -112,5 +112,5 @@ class chromedriver_autoupdate:
 
 
 if __name__ == '__main__':
-    print(chromedriver_autoupdate().check())
+    print(chromedriver_autoupdate(operatingSystem="win").check())
     input('press enter to exit')
