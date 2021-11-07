@@ -7,7 +7,7 @@ If chromedriver hasn't existed, this program will check the version and update t
 
 Although the program is for auto-update chromedriver, you can use the same way of the program as the webdriver to update other browsers.
 
-Because I only use chromedriver, the program can only be for chromedriver.XDD
+Using parameter：operatingSystem to choose win or mac64_m1 or mac64 or linux64
 
 ###-----------------------------------------------------------------------------
 
