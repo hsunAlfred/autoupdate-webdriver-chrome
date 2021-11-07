@@ -5,13 +5,27 @@ import requests
 from zipfile import ZipFile
 import traceback
 import logging.config
+import sys
 
 
 class chromedriver_autoupdate:
-    def __init__(self):
+    def __init__(self, operatingSystem):
         self.__errKeyWord = '\nDetail:'
         logging.config.fileConfig('logging.conf')
         self.__logger = logging.getLogger('timeRotateLogger')
+
+        if operatingSystem == "linux64":
+            self.__driverZipName = "chromedriver_linux64.zip"
+        elif operatingSystem == "mac64":
+            self.__driverZipName = "chromedriver_mac64.zip"
+        elif operatingSystem == "mac64_m1":
+            self.__driverZipName = "chromedriver_mac64_m1.zip"
+        elif operatingSystem == "win":
+            self.__driverZipName = "chromedriver_win32.zip"
+        else:
+            print('err:operatingSystem should be win or mac64_m1 or mac64 or linux64, \
+                such as \nchromedriver_autoupdate(operatingSystem = "win")')
+            sys.exit(1)
 
     def check(self) -> str:
         '''執行webdriver，檢查chromedriver.exe是否存在另確認版本是否可用'''
@@ -77,7 +91,7 @@ class chromedriver_autoupdate:
                 temp_start = re[:temp_end].rfind('ChromeDriver')
                 v = re[temp_start:temp_end].split('</strong>')[0].split(' ')[1]
 
-            driver_url = f'https://chromedriver.storage.googleapis.com/{v}/chromedriver_win32.zip'
+            driver_url = f'https://chromedriver.storage.googleapis.com/{v}/{self.__driverZipName}'
 
             try:
                 ref = requests.get(driver_url)
