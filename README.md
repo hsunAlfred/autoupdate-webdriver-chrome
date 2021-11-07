@@ -32,7 +32,7 @@ at the top of your program.
 Third, call method ```check()``` in your program, such as 
 ```python
 chromedriver_autoupdate(operatingSystem = "win").check()
-# operatingSystem can be win mac64_m1 or mac64 or linux64
+# operatingSystem can be win or mac64_m1 or mac64 or linux64
 ```
 
 If update chromedriver is successful, it will return ```OK```.
